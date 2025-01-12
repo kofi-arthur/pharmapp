@@ -1,0 +1,14 @@
+.button {
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: var(--main);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: var(--mainHover);
+}
