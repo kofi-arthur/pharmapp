@@ -1,0 +1,128 @@
+.homeSection {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+
+.summary {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 21px;
+}
+
+.summaryItem {
+  width: 350px;
+  height: 200px;
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--tile);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summaryItem .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.summaryItem .top i {
+  margin-right: 10px;
+}
+
+.summaryItem .top p {
+  font-size: 0.8rem;
+  font-weight: 550;
+}
+
+.summaryItem h1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.summaryItem h1 span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.recentSales {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 42px;
+  overflow: hidden;
+}
+
+.recentSalesHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.recentSales h1 {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.tableContainer {
+  width: 100%;
+  height: 650px;
+  background: var(--tile);
+  padding: 0 16px;
+  border-radius: 16px;
+  overflow: auto;
+}
+
+.recentSalesTable {
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+}
+
+.recentSalesTable thead {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  background: var(--tile);
+}
+
+.recentSalesTable thead th {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color);
+  padding: 16px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.recentSalesTable tbody tr:hover {
+  background: var(--hover);
+}
+
+.recentSalesTable tbody td {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color);
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+}
