@@ -7,7 +7,7 @@ import NavigationBar from '../components/navigation'
 
 function Layout() {
   return (
-    <main>
+    <main className={styles.mainLayout}>
       <NavigationBar />
       <section className={styles.appRender}>
         <Outlet />
