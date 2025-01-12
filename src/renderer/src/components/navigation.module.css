@@ -1,0 +1,62 @@
+.navigationBar {
+  width: 300px;
+  height: 100vh;
+  background: var(--tile);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.extra {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid var(--border);
+  padding: 16px;
+}
+
+.path {
+  width: 100%;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  position: relative;
+  padding: 4px;
+}
+
+.option {
+  width: 50%;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+.option i {
+  margin-right: 6px;
+}
+
+.option p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.selector {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: calc(32px);
+  background: var(--tile);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  z-index: 0;
+  transition: 0.2s;
+}
