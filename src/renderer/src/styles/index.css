@@ -5,7 +5,10 @@
   --color: #333333;
   --color-sub: #999999;
 
+  --hover: #eee;
   --mainHover: #009669;
+
+  --active: #00c98d63;
 
   --background: #dfe4ec;
 
@@ -26,6 +29,8 @@
 
   --color: #ebebeb;
   --color-sub: #999999;
+
+  --hover: #4e4e4e;
 
   --background: #222224;
 
