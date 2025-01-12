@@ -6,17 +6,20 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, createRoutesFromChildren, Route, RouterProvider } from 'react-router'
 
+import { ThemeProvider } from './contexts/theme.jsx'
+
 import Root from './root.jsx'
 import AppLayout from './app/layout.jsx'
 import Home from './app/home.jsx'
-import { ThemeProvider } from './contexts/theme.jsx'
+import NotFound from './app/notFound.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromChildren([
     <Route path="/" element={<Root />} />,
     <Route element={<AppLayout />}>
       <Route path="/home" element={<Home />} />,
-    </Route>
+    </Route>,
+    <Route path="*" element={<NotFound />} key="404" />
   ])
 )
 
