@@ -1,0 +1,90 @@
+:root {
+  --main: #00c98c;
+  --secondary: #969696;
+
+  --color: #333333;
+  --color-sub: #999999;
+
+  --mainHover: #009669;
+
+  --background: #dfe4ec;
+
+  --tile: #ffffff;
+
+  --border: #ccc;
+
+  --slideInFromBottom: slideInFromBottom 0.5s ease-out forwards;
+  --popin-animation: popIn 0.2s forwards;
+
+  ::selection {
+    background-color: var(--tetiary);
+  }
+}
+
+[data-theme='dark'] {
+  --secondary: #969696;
+
+  --color: #ebebeb;
+  --color-sub: #999999;
+
+  --background: #222224;
+
+  --tile: #383838;
+
+  --border: #575757;
+
+  ::selection {
+    background-color: var(--tetiary);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  scrollbar-color: var(--main) #fff1;
+  scrollbar-width: thin;
+  font-family: 'Poppins', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--background);
+  width: 100vw;
+  height: 100vh;
+  color: var(--color);
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+body.dark {
+  background: var(--darkBackground);
+  color: #dddddd;
+}
+
+/* animations */
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
