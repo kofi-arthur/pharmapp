@@ -11,6 +11,9 @@ import { ThemeProvider } from './contexts/theme.jsx'
 import Root from './root.jsx'
 import AppLayout from './app/layout.jsx'
 import Home from './app/home.jsx'
+import Sell from './app/sell.jsx'
+import Sales from './app/sales.jsx'
+import Inventory from './app/inventory.jsx'
 import NotFound from './app/notFound.jsx'
 
 const router = createBrowserRouter(
@@ -18,6 +21,9 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />} />,
     <Route element={<AppLayout />}>
       <Route path="/home" element={<Home />} />,
+      <Route path="/sell" element={<Sell />} />,
+      <Route path="/sales" element={<Sales />} />,
+      <Route path="/inventory" element={<Inventory />} />,
     </Route>,
     <Route path="*" element={<NotFound />} key="404" />
   ])
