@@ -1,0 +1,90 @@
+.inventorySection {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  row-gap: 1rem;
+  overflow: hidden;
+}
+
+.operation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBar {
+  width: 100%;
+  background: var(--tile);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.searchBar:focus-within {
+  border: 2px solid var(--main);
+}
+
+.searchBar input {
+  width: 98%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  background: var(--tile);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer table col:nth-child(1) {
+  width: 50%;
+}
+
+.tableContainer table col:nth-child(2),
+.tableContainer table col:nth-child(3) {
+  width: 20%;
+}
+
+.tableContainer table col:nth-child(4),
+.tableContainer table col:nth-child(5) {
+  width: 5%;
+}
+
+.tableContainer table th {
+  text-align: left;
+  padding: 1rem;
+}
+
+.tableContainer tbody tr:hover {
+  background: var(--hover);
+}
+
+.tableContainer tbody td {
+  padding: 1rem;
+  text-align: left;
+  border-top: 1px solid var(--border);
+}
+
+.tableContainer tbody td i {
+  cursor: pointer;
+}
