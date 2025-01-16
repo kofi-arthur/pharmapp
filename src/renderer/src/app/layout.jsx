@@ -9,9 +9,7 @@ function Layout() {
   return (
     <main className={styles.mainLayout}>
       <NavigationBar />
-      <section className={styles.appRender}>
-        <Outlet />
-      </section>
+      <Outlet />
     </main>
   )
 }
