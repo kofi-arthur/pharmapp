@@ -27,17 +27,27 @@ export default function NavigationBar() {
         </NavLink>
 
         <NavLink
-          to={'/sales'}
+          to={'/sell'}
           className={({ isActive }) =>
             isActive ? styles.activeNavigationItem : styles.navigationItem
           }
         >
           <i className="far fa-cash-register"></i>
+          <p>Sell</p>
+        </NavLink>
+
+        <NavLink
+          to={'/sales'}
+          className={({ isActive }) =>
+            isActive ? styles.activeNavigationItem : styles.navigationItem
+          }
+        >
+          <i className="far fa-receipt"></i>
           <p>Sales</p>
         </NavLink>
 
         <NavLink
-          to={'/drugs'}
+          to={'/inventory'}
           className={({ isActive }) =>
             isActive ? styles.activeNavigationItem : styles.navigationItem
           }
