@@ -11,6 +11,9 @@
 
   --active: #00c98d63;
 
+  --momo: #ffaf0379;
+  --cash: #00c98d79;
+
   --background: #dfe4ec;
 
   --tile: #ffffff;
@@ -40,7 +43,7 @@
   --border: #575757;
 
   ::selection {
-    background-color: var(--tetiary);
+    background-color: var(--select);
   }
 }
 

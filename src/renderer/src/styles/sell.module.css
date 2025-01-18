@@ -1,0 +1,249 @@
+.sellLayout {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  overflow: hidden;
+}
+
+.leftCol {
+  width: 100%;
+  background: var(--tile);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  row-gap: 1rem;
+  overflow: hidden;
+}
+
+.leftCol .search {
+  width: 100%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 8px;
+}
+
+.leftCol .search:focus-within {
+  border: 2px solid var(--main);
+}
+
+.leftCol .search input {
+  width: 95%;
+  font-size: 1rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color);
+}
+
+.leftCol .products {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.leftCol .products .product {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.leftCol .products .product:hover {
+  background: var(--hover);
+}
+
+.leftCol .products .product h1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.leftCol .products .product p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-sub);
+}
+
+.rightCol {
+  width: 100%;
+  height: 100%;
+  background: var(--tile);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-rows: 50px 1fr 220px;
+  row-gap: 1rem;
+  overflow: hidden;
+}
+
+.rightCol .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rightCol .cartContent {
+  width: 100%;
+  height: 100%;
+}
+
+.rightCol .cartContent .cartItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-left: 3rem;
+  position: relative;
+}
+
+.rightCol .cartContent .cartItem .deleteButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  cursor: pointer;
+}
+
+.rightCol .cartContent .cartItem .deleteButton:hover {
+  color: red;
+}
+
+.rightCol .cartContent .cartItem h1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.rightCol .cartContent .cartItem p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-sub);
+}
+
+.rightCol .cartContent .cartItem .quantity {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.rightCol .cartContent .cartItem .quantity input {
+  width: 50px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: none;
+  color: var(--color);
+}
+
+.rightCol .cartContent .cartItem .quantity i {
+  width: 30px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rightCol .paymentInfo {
+  border-top: 2px dashed var(--border);
+  padding-top: 1rem;
+}
+
+.rightCol .paymentInfo h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color);
+}
+
+.rightCol .paymentInfo .total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.rightCol .paymentInfo .total p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color);
+}
+
+.rightCol .paymentInfo .total span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color);
+}
+
+.rightCol .paymentMethod {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.rightCol .paymentMethod .method {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+
+.rightCol .paymentMethod .method:nth-child(1) p {
+  background: var(--cash);
+}
+
+.rightCol .paymentMethod .method:nth-child(2) p {
+  background: var(--momo);
+}
+
+.rightCol .paymentMethod .method input {
+  margin-right: 5px;
+}
+
+.rightCol .paymentMethod .method p {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 3px 1rem;
+  border-radius: 30px;
+}
+
+.rightCol .paymentInfo .sellButton {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--main);
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rightCol .paymentInfo .sellButton:hover {
+  background: var(--mainHover);
+}
