@@ -55,6 +55,8 @@
   padding: 8px 16px;
   font-size: 0.9rem;
   font-weight: 500;
+  background: var(--tile);
+  color: var(--color);
 }
 
 .tableRestrain {

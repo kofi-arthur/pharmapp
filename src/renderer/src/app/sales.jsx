@@ -52,12 +52,14 @@ export default function Sales() {
               <col />
               <col />
               <col />
+              <col />
             </colgroup>
             <thead>
               <tr>
                 <th>Name</th>
                 <th>Qty</th>
                 <th>Price</th>
+                <th>Payment Method</th>
                 <th>Date | Time</th>
               </tr>
             </thead>
@@ -66,96 +68,21 @@ export default function Sales() {
                 <td>Paracetamol</td>
                 <td>2</td>
                 <td>1.50</td>
+                <td>Cash</td>
                 <td>Sept 15, 2022 - 18:45</td>
               </tr>
               <tr>
                 <td>Paracetamol</td>
                 <td>2</td>
                 <td>1.50</td>
+                <td>Momo</td>
                 <td>Sept 15, 2022 - 18:45</td>
               </tr>
               <tr>
                 <td>Paracetamol</td>
                 <td>2</td>
                 <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
-                <td>Sept 15, 2022 - 18:45</td>
-              </tr>
-              <tr>
-                <td>Paracetamol</td>
-                <td>2</td>
-                <td>1.50</td>
+                <td>Cash</td>
                 <td>Sept 15, 2022 - 18:45</td>
               </tr>
             </tbody>
