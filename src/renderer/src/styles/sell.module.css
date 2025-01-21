@@ -129,7 +129,7 @@
 }
 
 .rightCol .cartContent .cartItem p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--color-sub);
 }
@@ -144,7 +144,7 @@
 
 .rightCol .cartContent .cartItem .quantity input {
   width: 50px;
-  padding: 10px 0;
+  padding: 6px 0;
   text-align: center;
   font-size: 1rem;
   font-weight: 500;
