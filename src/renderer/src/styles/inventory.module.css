@@ -13,11 +13,11 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .searchBar {
-  width: 100%;
+  width: 92%;
   background: var(--tile);
   display: flex;
   align-items: center;
@@ -39,6 +39,18 @@
   outline: none;
   font-size: 1rem;
   font-weight: 500;
+}
+
+.addButton {
+  width: 6%;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  background: var(--main);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .tableContainer {
