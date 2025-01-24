@@ -13,7 +13,7 @@ export default function Inventory() {
     setSearchTerm(e)
   }
 
-  const [isAdding, setIsAdding] = useState(true)
+  const [isAdding, setIsAdding] = useState(false)
 
   return (
     <>
@@ -34,7 +34,9 @@ export default function Inventory() {
               className={isSearching ? 'far fa-times' : 'far fa-search'}
             ></i>
           </div>
-          <button className={styles.addButton}>Add</button>
+          <button className={styles.addButton} onClick={() => setIsAdding(true)}>
+            Add
+          </button>
         </div>
 
         <div className={styles.tableContainer}>
@@ -71,7 +73,7 @@ export default function Inventory() {
           </table>
         </div>
       </section>
-      {isAdding && <AddComponent />}
+      {isAdding && <AddComponent closeModal={() => setIsAdding(false)} />}
     </>
   )
 }

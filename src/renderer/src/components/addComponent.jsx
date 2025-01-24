@@ -1,7 +1,7 @@
 import styles from './addComponent.module.css'
 import React, { useState } from 'react'
 
-export default function AddComponent() {
+export default function AddComponent({ closeModal }) {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [quantity, setQuantity] = useState('')
@@ -12,7 +12,7 @@ export default function AddComponent() {
       <div className={styles.addComponent}>
         <div className={styles.title}>
           <h1>Add Component</h1>
-          <i className="far fa-times"></i>
+          <i className="far fa-times" onClick={() => closeModal()}></i>
         </div>
         <div className={styles.field}>
           <label>Name</label>
