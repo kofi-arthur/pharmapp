@@ -57,6 +57,12 @@
   font-weight: 600;
 }
 
+.summaryItem .medicineName {
+  width: 100%;
+  text-align: center;
+  color: var(--color-sub);
+}
+
 .recentSales {
   width: 100%;
   height: auto;
@@ -125,4 +131,8 @@
   padding: 12px 0;
   border-top: 1px solid var(--border);
   cursor: pointer;
+}
+
+.recentSalesTable tbody td:nth-child(1) {
+  padding-left: 1rem;
 }

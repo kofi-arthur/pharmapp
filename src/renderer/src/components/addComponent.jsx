@@ -1,11 +1,41 @@
 import styles from './addComponent.module.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-export default function AddComponent({ closeModal }) {
+export default function AddComponent({ meds, api, closeModal, medicine }) {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
   const [quantity, setQuantity] = useState('')
   const [description, setDescription] = useState('')
+
+  // handle add medicine
+  async function handleAddMedicine() {
+    // check for an existing medicine witht he same name
+    if (meds.find((med) => med.name === name)) {
+      alert('Medicine already exists')
+      return
+    }
+    await api.addMedicine(name, description, quantity, price)
+    closeModal()
+  }
+
+  // check for the presence of a medicine
+  async function checkMedicine() {
+    medicine &&
+      (setName(medicine.name),
+      setDescription(medicine.description),
+      setPrice(medicine.price),
+      setQuantity(medicine.quantity))
+  }
+
+  useEffect(() => {
+    checkMedicine()
+  }, [])
+
+  // handle edit medicine
+  async function handleEditMedicine() {
+    await api.updateMedicine(medicine.id, name, description, quantity, price)
+    closeModal()
+  }
 
   return (
     <section className={styles.addComponentSection}>
@@ -55,7 +85,12 @@ export default function AddComponent({ closeModal }) {
             rows={5}
           ></textarea>
         </div>
-        <button className={styles.addComponentButton}>Add</button>
+        <button
+          onClick={medicine ? handleEditMedicine : handleAddMedicine}
+          className={styles.addComponentButton}
+        >
+          {medicine ? `Update Medicine` : `Add Medicine`}
+        </button>
       </div>
     </section>
   )

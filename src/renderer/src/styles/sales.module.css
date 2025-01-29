@@ -59,6 +59,11 @@
   color: var(--color);
 }
 
+.operations input:focus {
+  outline: 1px solid var(--main);
+  border: 1px solid var(--main);
+}
+
 .tableRestrain {
   width: 100%;
   height: 100%;

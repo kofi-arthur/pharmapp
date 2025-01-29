@@ -59,7 +59,6 @@
   justify-content: space-between;
   padding: 0px 0.8rem;
   border-radius: 8px;
-  cursor: pointer;
 }
 
 .leftCol .products .product:hover {
@@ -75,6 +74,23 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-sub);
+}
+
+.leftCol .products .priceAdd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.leftCol .products .product i {
+  font-size: 1.5rem;
+  color: var(--main);
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.leftCol .products .product i:hover {
+  color: var(--mainHover);
 }
 
 .rightCol {
@@ -99,6 +115,9 @@
 .rightCol .cartContent {
   width: 100%;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 12px;
 }
 
 .rightCol .cartContent .cartItem {
@@ -134,6 +153,12 @@
   color: var(--color-sub);
 }
 
+.rightCol .cartContent .cartItem .quantityPrice {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .rightCol .cartContent .cartItem .quantity {
   width: 120px;
   display: flex;
@@ -163,6 +188,15 @@
   border: 1px solid var(--border);
   border-radius: 6px;
   cursor: pointer;
+}
+
+.rightCol .cartContent .cartItem h4 {
+  width: 100px;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color);
+  margin-left: 1rem;
 }
 
 .rightCol .paymentInfo {

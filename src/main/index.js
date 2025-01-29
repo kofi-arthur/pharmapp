@@ -1,7 +1,20 @@
 import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
-import icon from '../../resources/icon.png?asset'
+import icon from '../../resources/icon.png'
+import { initializeDatabase } from '../renderer/src/db/init'
+import {
+  deleteMedicine,
+  getAllMedicines,
+  getAllSales,
+  getBestSoldProductToday,
+  getSalesByDate,
+  getTodaysSales,
+  insertMedicine,
+  insertSales,
+  updateMedicine,
+  updateMedicineQuantity
+} from '../renderer/src/db/data'
 
 function createWindow() {
   // Create the browser window.
@@ -10,6 +23,7 @@ function createWindow() {
     height: 1080,
     show: false,
     autoHideMenuBar: true,
+    icon: join(__dirname, '../../resources/icon.png'),
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
@@ -43,15 +57,53 @@ app.whenReady().then(() => {
   // Set app user model id for windows
   electronApp.setAppUserModelId('com.ace.pharmapp')
 
+  initializeDatabase()
+
+  ipcMain.handle('fetch-medicines', async () => {
+    return getAllMedicines()
+  })
+
+  ipcMain.handle('add-medicine', async (_, data) => {
+    insertMedicine(data.name, data.description, data.quantity, data.price)
+  })
+
+  ipcMain.handle('update-medicine', async (_, data) => {
+    updateMedicine(data.id, data.name, data.description, data.quantity, data.price)
+  })
+
+  ipcMain.handle('delete-medicine', async (_, id) => {
+    deleteMedicine(id)
+  })
+
+  ipcMain.handle('sell-medicine', async (_, data) => {
+    data.forEach((med) => {
+      updateMedicineQuantity(med.id, med.remainingQuantity)
+      insertSales(med.name, med.unitPrice, med.soldQuantity, med.price, med.paymentMethod)
+    })
+  })
+
+  ipcMain.handle('fetch-sales', async () => {
+    return getAllSales()
+  })
+
+  ipcMain.handle('fetch-best-sold-product', async () => {
+    return getBestSoldProductToday()
+  })
+
+  ipcMain.handle('fetch-todays-sales', async () => {
+    return getTodaysSales()
+  })
+
+  ipcMain.handle('fetch-sales-by-date', async (_, date) => {
+    return getSalesByDate(date)
+  })
+
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
   // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
-
-  // IPC test
-  ipcMain.on('ping', () => console.log('pong'))
 
   createWindow()
 
